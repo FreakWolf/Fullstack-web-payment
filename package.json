@@ -11,18 +11,25 @@
     "start": "node index.js",
     "server": "nodemon index.js",
     "client": "npm run start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\" \"npm run webhook\"",
+    "webhook": "lt -p 5000 -s vndzfnvknzdn"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@railway/cli": "^3.0.13",
+    "body-parser": "^1.20.2",
     "concurrently": "^7.6.0",
     "cookie-session": "^2.0.0",
     "express": "^4.18.2",
+    "localtunnel": "^2.0.2",
+    "lodash": "^4.17.21",
     "mongoose": "^7.0.3",
     "nodemon": "^2.0.22",
     "passport": "^0.5.3",
-    "passport-google-oauth20": "^2.0.0"
+    "passport-google-oauth20": "^2.0.0",
+    "path-parser": "^6.1.0",
+    "sendgrid": "^5.2.3",
+    "stripe": "^8.4.1"
   }
 }
